@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "107386459528",
+    "firebase_url": "https://naevatest-3f71c.firebaseio.com",
+    "project_id": "naevatest-3f71c",
+    "storage_bucket": "naevatest-3f71c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107386459528:android:f6b784d3e4bd789b",
+        "android_client_info": {
+          "package_name": "com.example.steffen.naevatest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107386459528-q4vk3n0nf6ps8s5g6jd34nm44prb8pqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.steffen.naevatest",
+            "certificate_hash": "7ebd04fdc2256ccf0f8737fdcf8b352a1fdcf681"
+          }
+        },
+        {
+          "client_id": "107386459528-ak7ajql9aqlk8picv4a2srqb0nj1h4hl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEIiEXFhdmwyHa-cZFhKOOkwQ1z3YHIQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107386459528-ak7ajql9aqlk8picv4a2srqb0nj1h4hl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
