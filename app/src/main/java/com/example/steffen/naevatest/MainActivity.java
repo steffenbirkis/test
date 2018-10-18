@@ -46,6 +46,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -99,10 +101,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         //Henter brukerobjectet fra firebase på oppstart.
         FirebaseFirestore db=FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("steffen").document("41046505");
+        FirebaseUser fbUser=FirebaseAuth.getInstance().getCurrentUser();
+        String username=fbUser.getEmail();
+        DocumentReference docRef = db.collection("steffen").document(username);
 
 
         setContentView(R.layout.activity_main);
+
         sharedPreferences = getSharedPreferences(SHARED_PREFS_NAME, 0);
         txPowerLevel = sharedPreferences.getInt(PREF_TX_POWER_LEVEL,
                 AdvertiseSettings.ADVERTISE_TX_POWER_MEDIUM);
@@ -114,6 +119,9 @@ public class MainActivity extends Activity {
                 User user = documentSnapshot.toObject(User.class);
                 current=user;
                 System.out.println(user.getName());
+
+
+
                 init();
             }
         });
@@ -162,6 +170,7 @@ public class MainActivity extends Activity {
         } else {
             adv = btAdapter.getBluetoothLeAdvertiser();
             advertiseCallback = createAdvertiseCallback();
+
             buildUi();
         }
     }
